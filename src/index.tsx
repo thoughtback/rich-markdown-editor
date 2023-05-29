@@ -5,7 +5,7 @@ import { EditorState, Selection, Plugin } from "prosemirror-state";
 import { dropCursor } from "prosemirror-dropcursor";
 import { gapCursor } from "prosemirror-gapcursor";
 import { MarkdownParser, MarkdownSerializer } from "prosemirror-markdown";
-import { EditorView } from "prosemirror-view";
+import { EditorView, NodeViewConstructor } from "prosemirror-view";
 import { Schema, NodeSpec, MarkSpec, Slice, Node } from "prosemirror-model";
 import { inputRules, InputRule } from "prosemirror-inputrules";
 import { keymap } from "prosemirror-keymap";
@@ -209,9 +209,7 @@ class RichMarkdownEditor extends React.PureComponent<Props, State> {
   plugins: Plugin[];
   keymaps: Plugin[];
   inputRules: InputRule[];
-  nodeViews: {
-    [name: string]: (node, view, getPos, decorations) => ComponentView;
-  };
+  nodeViews: { [node: string]: NodeViewConstructor };
   nodes: { [name: string]: NodeSpec };
   marks: { [name: string]: MarkSpec };
   commands: Record<string, any>;
