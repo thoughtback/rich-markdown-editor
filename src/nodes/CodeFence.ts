@@ -88,7 +88,7 @@ export default class CodeFence extends Node {
           },
         },
       ],
-      toDOM: node => {
+      toDOM: (node) => {
         const button = document.createElement("button");
         button.innerText = "Copy";
         button.type = "button";
@@ -117,7 +117,7 @@ export default class CodeFence extends Node {
   }
 
   commands({ type, schema }) {
-    return attrs =>
+    return (attrs) =>
       toggleBlockType(type, schema.nodes.paragraph, {
         language: localStorage?.getItem(PERSISTENCE_KEY) || DEFAULT_LANGUAGE,
         ...attrs,
@@ -129,19 +129,16 @@ export default class CodeFence extends Node {
       "Shift-Ctrl-\\": toggleBlockType(type, schema.nodes.paragraph),
       "Shift-Enter": (state, dispatch) => {
         if (!isInCode(state)) return false;
-        const {
-          tr,
-          selection,
-        }: { tr: Transaction; selection: TextSelection } = state;
+        const { tr, selection }: { tr: Transaction; selection: TextSelection } =
+          state;
         const text = selection?.$anchor?.nodeBefore?.text;
 
         let newText = "\n";
 
         if (text) {
           const splitByNewLine = text.split("\n");
-          const numOfSpaces = splitByNewLine[splitByNewLine.length - 1].search(
-            /\S|$/
-          );
+          const numOfSpaces =
+            splitByNewLine[splitByNewLine.length - 1].search(/\S|$/);
           newText += " ".repeat(numOfSpaces);
         }
 
@@ -158,7 +155,7 @@ export default class CodeFence extends Node {
     };
   }
 
-  handleCopyToClipboard = event => {
+  handleCopyToClipboard = (event) => {
     const { view } = this.editor;
     const element = event.target;
     const { top, left } = element.getBoundingClientRect();
@@ -178,7 +175,7 @@ export default class CodeFence extends Node {
     }
   };
 
-  handleLanguageChange = event => {
+  handleLanguageChange = (event) => {
     const { view } = this.editor;
     const { tr } = view.state;
     const element = event.target;
@@ -222,7 +219,7 @@ export default class CodeFence extends Node {
   parseMarkdown() {
     return {
       block: "code_block",
-      getAttrs: tok => ({ language: tok.info }),
+      getAttrs: (tok) => ({ language: tok.info }),
     };
   }
 }
