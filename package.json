@@ -25,6 +25,9 @@
     },
     "transformIgnorePatterns": [
       "node_modules/(?!(react-medium-image-zoom|gemoji)/)"
+    ],
+    "modulePathIgnorePatterns": [
+        "<rootDir>/dist/"
     ]
   },
   "dependencies": {
