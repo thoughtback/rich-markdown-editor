@@ -6,7 +6,7 @@
 # rich-markdown-editor
 
 A React and [Prosemirror](https://prosemirror.net/) based editor that powers [Outline](http://getoutline.com) and can also be used for displaying content in a read-only fashion.
-The editor is WYSIWYG and includes formatting tools whilst retaining the ability to write markdown shortcuts inline and output plain Markdown. See the **[Live demo storybook](https://rich-markdown-editor-demo.onrender.com/)**.
+The editor is WYSIWYG and includes formatting tools whilst retaining the ability to write markdown shortcuts inline and output plain Markdown. See the **[Live Demo Storybook](https://thoughtback.github.io/rich-markdown-editor/)**.
 
 > Important Note: This project is **not attempting to be an all-purpose Markdown editor**. It is built for the [Outline](http://getoutline.com) knowledge base, and whilst others are welcome to fork or use this package in your own products, development decisions are centered around the needs of Outline.
 
@@ -47,7 +47,6 @@ Clone this repo and run the Storybook with `yarn start` to see a wide variety of
 A unique id for this editor, used to persist settings in local storage. If no `id` is passed then the editor will default to using the location pathname.
 
 #### `defaultValue`
-
 A markdown string that represents the initial value of the editor. Use this to prop to restore
 previously saved content for the user to continue editing.
 
