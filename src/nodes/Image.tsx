@@ -8,6 +8,7 @@ import getDataTransferFiles from "../lib/getDataTransferFiles";
 import uploadPlaceholderPlugin from "../lib/uploadPlaceholder";
 import insertFiles from "../commands/insertFiles";
 import Node from "./Node";
+import "react-medium-image-zoom/dist/styles.css";
 
 /**
  * Matches following attributes in Markdown-typed image: [, alt, src, class]
@@ -258,7 +259,7 @@ export default class Image extends Node {
     };
 
   component = (props) => {
-    const { theme, isSelected } = props;
+    const { isSelected } = props;
     const { alt, src, title, layoutClass } = props.node.attrs;
     const className = layoutClass ? `image image-${layoutClass}` : "image";
 
@@ -274,19 +275,9 @@ export default class Image extends Node {
               onClick={this.handleDownload(props)}
             />
           </Button>
-          <ImageZoom
-            image={{
-              src,
-              alt,
-              title,
-            }}
-            defaultStyles={{
-              overlay: {
-                backgroundColor: theme.background,
-              },
-            }}
-            shouldRespectMaxDimension
-          />
+          <ImageZoom>
+            <img src={src} alt={alt} title={title} />
+          </ImageZoom>
         </ImageWrapper>
         <Caption
           onKeyDown={this.handleKeyDown(props)}
