@@ -1,0 +1,30 @@
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+      time: 07:00
+      timezone: America/Los_Angeles
+    open-pull-requests-limit: 10
+    reviewers:
+      - chadwhitaker
+    assignees:
+      - chadwhitaker
+    commit-message:
+      prefix: chore
+      include: scope
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+      time: 07:00
+      timezone: America/Los_Angeles
+    reviewers:
+      - chadwhitaker
+    assignees:
+      - chadwhitaker
+    open-pull-requests-limit: 10

@@ -1,14 +1,18 @@
-[![npm version](https://badge.fury.io/js/rich-markdown-editor.svg)](https://badge.fury.io/js/rich-markdown-editor) [![CircleCI](https://img.shields.io/circleci/project/github/outline/rich-markdown-editor.svg)](https://circleci.com/gh/outline/rich-markdown-editor) [![Formatted with Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier) [![TypeScript](https://camo.githubusercontent.com/21132e0838961fbecb75077042aa9b15bc0bf6f9/68747470733a2f2f62616467656e2e6e65742f62616467652f4275696c74253230576974682f547970655363726970742f626c7565)](https://www.typescriptlang.org/) [![Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub)](https://github.com/sponsors/outline)
+[![npm version](https://img.shields.io/npm/v/@thoughtback/rich-markdown-editor?label=npm%20package)](https://www.npmjs.com/package/@thoughtback/rich-markdown-editor) [![CI](https://github.com/thoughtback/rich-markdown-editor/actions/workflows/ci.yml/badge.svg)](https://github.com/thoughtback/rich-markdown-editor/actions?query=workflow%3Aci)
+ [![Formatted with Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier) [![TypeScript](https://camo.githubusercontent.com/21132e0838961fbecb75077042aa9b15bc0bf6f9/68747470733a2f2f62616467656e2e6e65742f62616467652f4275696c74253230576974682f547970655363726970742f626c7565)](https://www.typescriptlang.org/) [![Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub)](https://github.com/sponsors/thoughtback)
 
 
 
 # rich-markdown-editor
 
-A React and [Prosemirror](https://prosemirror.net/) based editor that powers [Outline](http://getoutline.com) and can also be used for displaying content in a read-only fashion.
-The editor is WYSIWYG and includes formatting tools whilst retaining the ability to write markdown shortcuts inline and output plain Markdown. See the **[Live demo storybook](https://rich-markdown-editor-demo.onrender.com/)**.
+A React and [Prosemirror](https://prosemirror.net/) based editor that powers [Thoughtback](https://thoughtback.com) and can also be used for displaying content in a read-only fashion.
+The editor is WYSIWYG and includes formatting tools whilst retaining the ability to write markdown shortcuts inline and output plain Markdown. See the **[Live Demo Storybook](https://thoughtback.github.io/rich-markdown-editor/)**.
 
-> Important Note: This project is **not attempting to be an all-purpose Markdown editor**. It is built for the [Outline](http://getoutline.com) knowledge base, and whilst others are welcome to fork or use this package in your own products, development decisions are centered around the needs of Outline.
+> Important Note: This project is **not attempting to be an all-purpose Markdown editor**. It is built for the [Thoughtback](https://thoughtback.com) app, and whilst others are welcome to fork or use this package in your own products, development decisions are centered around the needs of Thoughtback.
 
+## Special Thanks
+
+This project was originally created by [Outline](https://getoutline.com) and [Tom Moor](https://github.com/tommoor). Thank you for the massive contribution and your love for beautiful editing experiences. ❤️
 
 
 ## Usage
@@ -16,13 +20,7 @@ The editor is WYSIWYG and includes formatting tools whilst retaining the ability
 ### Install
 
 ```bash
-yarn add rich-markdown-editor
-```
-
-or
-
-```bash
-npm install rich-markdown-editor
+npm install @thoughtback/rich-markdown-editor
 ```
 
 Note that `react`, `react-dom`, and `styled-components` are _required_ peer dependencies.
@@ -30,7 +28,7 @@ Note that `react`, `react-dom`, and `styled-components` are _required_ peer depe
 ### Import
 
 ```javascript
-import Editor from "rich-markdown-editor";
+import Editor from "@thoughtback/rich-markdown-editor";
 
 <Editor
   defaultValue="Hello world!"
@@ -39,7 +37,6 @@ import Editor from "rich-markdown-editor";
 
 Clone this repo and run the Storybook with `yarn start` to see a wide variety of example usage.
 
-
 ### Props
 
 #### `id`
@@ -47,14 +44,12 @@ Clone this repo and run the Storybook with `yarn start` to see a wide variety of
 A unique id for this editor, used to persist settings in local storage. If no `id` is passed then the editor will default to using the location pathname.
 
 #### `defaultValue`
-
 A markdown string that represents the initial value of the editor. Use this to prop to restore
 previously saved content for the user to continue editing.
 
 #### `value`
 
 A markdown string that represents the value of the editor. Use this prop to change the value of the editor once mounted, **this will re-render the entire editor** and as such is only suitable when also in `readOnly` mode. Do not pipe the value of `onChange` back into `value`, the editor keeps it's own internal state and this will result in unexpected side effects.
-
 #### `placeholder`
 
 Allows overriding of the placeholder. The default is "Write something nice…".

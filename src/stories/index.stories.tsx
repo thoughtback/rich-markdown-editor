@@ -113,7 +113,7 @@ __underline__
 ==highlighted==
 \`inline code\`
 !!placeholder!!
-[a link](http://www.getoutline.com)
+[a link](http://thoughtback.com)
 `,
 };
 
