@@ -17,13 +17,7 @@ The editor is WYSIWYG and includes formatting tools whilst retaining the ability
 ### Install
 
 ```bash
-yarn add rich-markdown-editor
-```
-
-or
-
-```bash
-npm install rich-markdown-editor
+npm install @thoughtback/rich-markdown-editor
 ```
 
 Note that `react`, `react-dom`, and `styled-components` are _required_ peer dependencies.
@@ -53,7 +47,6 @@ previously saved content for the user to continue editing.
 #### `value`
 
 A markdown string that represents the value of the editor. Use this prop to change the value of the editor once mounted, **this will re-render the entire editor** and as such is only suitable when also in `readOnly` mode. Do not pipe the value of `onChange` back into `value`, the editor keeps it's own internal state and this will result in unexpected side effects.
-
 #### `placeholder`
 
 Allows overriding of the placeholder. The default is "Write something nice…".
