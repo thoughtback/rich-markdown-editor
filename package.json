@@ -1,11 +1,11 @@
 {
-  "name": "rich-markdown-editor",
+  "name": "@thoughtback/rich-markdown-editor",
   "description": "A rich text editor with Markdown shortcuts",
-  "version": "11.21.3",
+  "version": "11.22.4",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "license": "BSD-3-Clause",
-  "funding": "https://github.com/sponsors/outline",
+  "funding": "https://github.com/sponsors/thoughtback",
   "scripts": {
     "build": "tsc",
     "build-storybook": "storybook build",
@@ -103,7 +103,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/outline/rich-markdown-editor.git"
+    "url": "git+https://github.com/thoughtback/rich-markdown-editor.git"
   },
   "keywords": [
     "editor",
@@ -113,7 +113,7 @@
   ],
   "author": "Tom Moor <tom.moor@gmail.com>",
   "bugs": {
-    "url": "https://github.com/outline/rich-markdown-editor/issues"
+    "url": "https://github.com/thoughtback/rich-markdown-editor/issues"
   },
-  "homepage": "https://github.com/outline/rich-markdown-editor#readme"
+  "homepage": "https://github.com/thoughtback/rich-markdown-editor#readme"
 }
