@@ -5,11 +5,14 @@
 
 # rich-markdown-editor
 
-A React and [Prosemirror](https://prosemirror.net/) based editor that powers [Outline](http://getoutline.com) and can also be used for displaying content in a read-only fashion.
+A React and [Prosemirror](https://prosemirror.net/) based editor that powers [Thoughtback](https://thoughtback.com) and can also be used for displaying content in a read-only fashion.
 The editor is WYSIWYG and includes formatting tools whilst retaining the ability to write markdown shortcuts inline and output plain Markdown. See the **[Live Demo Storybook](https://thoughtback.github.io/rich-markdown-editor/)**.
 
-> Important Note: This project is **not attempting to be an all-purpose Markdown editor**. It is built for the [Outline](http://getoutline.com) knowledge base, and whilst others are welcome to fork or use this package in your own products, development decisions are centered around the needs of Outline.
+> Important Note: This project is **not attempting to be an all-purpose Markdown editor**. It is built for the [Thoughtback](https://thoughtback.com) app, and whilst others are welcome to fork or use this package in your own products, development decisions are centered around the needs of Thoughtback.
 
+## Special Thanks
+
+This project was originally created by [Outline](https://getoutline.com) and [Tom Moor](https://github.com/tommoor). Thank you for the massive contribution and your love for beautiful editing experiences. ❤️
 
 
 ## Usage
@@ -25,7 +28,7 @@ Note that `react`, `react-dom`, and `styled-components` are _required_ peer depe
 ### Import
 
 ```javascript
-import Editor from "rich-markdown-editor";
+import Editor from "@thoughtback/rich-markdown-editor";
 
 <Editor
   defaultValue="Hello world!"
