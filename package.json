@@ -1,7 +1,7 @@
 {
   "name": "@thoughtback/rich-markdown-editor",
   "description": "A rich text editor with Markdown shortcuts",
-  "version": "11.23.0",
+  "version": "11.24.0",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "license": "BSD-3-Clause",
@@ -26,9 +26,7 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(react-medium-image-zoom|gemoji)/)"
     ],
-    "modulePathIgnorePatterns": [
-        "<rootDir>/dist/"
-    ]
+    "modulePathIgnorePatterns": ["<rootDir>/dist/"]
   },
   "dependencies": {
     "copy-to-clipboard": "^3.3.3",
@@ -112,12 +110,7 @@
     "type": "git",
     "url": "git+https://github.com/thoughtback/rich-markdown-editor.git"
   },
-  "keywords": [
-    "editor",
-    "markdown",
-    "text",
-    "wysiwyg"
-  ],
+  "keywords": ["editor", "markdown", "text", "wysiwyg"],
   "author": "Tom Moor <tom.moor@gmail.com>",
   "bugs": {
     "url": "https://github.com/thoughtback/rich-markdown-editor/issues"
