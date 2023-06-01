@@ -1,5 +1,5 @@
 import { InputRule } from "prosemirror-inputrules";
-import { createRoot } from "react-dom/client";
+import ReactDOM from "react-dom";
 import * as React from "react";
 import { Plugin } from "prosemirror-state";
 import { isInTable } from "prosemirror-tables";
@@ -46,8 +46,7 @@ export default class BlockMenuTrigger extends Extension {
     const button = document.createElement("button");
     button.className = "block-menu-trigger";
     button.type = "button";
-    const root = createRoot(button);
-    root.render(<PlusIcon color="currentColor" />);
+    ReactDOM.render(<PlusIcon color="currentColor" />, button);
 
     return [
       new Plugin({
