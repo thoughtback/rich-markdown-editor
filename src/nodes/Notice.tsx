@@ -2,7 +2,7 @@ import { wrappingInputRule } from "prosemirror-inputrules";
 import toggleWrap from "../commands/toggleWrap";
 import { WarningIcon, InfoIcon, StarredIcon } from "outline-icons";
 import * as React from "react";
-import { createRoot } from "react-dom/client";
+import ReactDOM from "react-dom";
 import Node from "./Node";
 import noticesRule from "../rules/notices";
 
@@ -72,8 +72,7 @@ export default class Notice extends Node {
 
         const icon = document.createElement("div");
         icon.className = "icon";
-        const root = createRoot(icon);
-        root.render(component);
+        ReactDOM.render(component, icon);
 
         return [
           "div",
