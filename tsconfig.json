@@ -9,7 +9,6 @@
     "resolveJsonModule": true,
     "module": "commonjs",
     "target": "es2017",
-    "skipLibCheck": true,
     "lib": ["dom", "es2018"],
     "jsx": "react",
     "types": [
@@ -22,6 +21,10 @@
     "removeComments": true,
     "declarationMap": true,
     "declaration": true,
+    "paths": {
+      "resize-observer-polyfill": ["./src/types/resize-observer-polyfill"],
+      "smooth-scroll-into-view-if-needed": ["./src/types/smooth-scroll-into-view-if-needed"]
+    }
   },
   "include": [
     "src/**/*"
