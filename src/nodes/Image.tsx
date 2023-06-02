@@ -3,7 +3,7 @@ import { DownloadIcon } from "outline-icons";
 import { Plugin, TextSelection, NodeSelection } from "prosemirror-state";
 import { InputRule } from "prosemirror-inputrules";
 import styled from "styled-components";
-import ImageZoom from "react-medium-image-zoom";
+import Zoom from "react-medium-image-zoom";
 import getDataTransferFiles from "../lib/getDataTransferFiles";
 import uploadPlaceholderPlugin from "../lib/uploadPlaceholder";
 import insertFiles from "../commands/insertFiles";
@@ -258,7 +258,7 @@ export default class Image extends Node {
     };
 
   component = (props) => {
-    const { theme, isSelected } = props;
+    const { isSelected } = props;
     const { alt, src, title, layoutClass } = props.node.attrs;
     const className = layoutClass ? `image image-${layoutClass}` : "image";
 
@@ -274,19 +274,9 @@ export default class Image extends Node {
               onClick={this.handleDownload(props)}
             />
           </Button>
-          <ImageZoom
-            image={{
-              src,
-              alt,
-              title,
-            }}
-            defaultStyles={{
-              overlay: {
-                backgroundColor: theme.background,
-              },
-            }}
-            shouldRespectMaxDimension
-          />
+          <Zoom>
+            <img src={src} alt={alt} title={title} />
+          </Zoom>
         </ImageWrapper>
         <Caption
           onKeyDown={this.handleKeyDown(props)}

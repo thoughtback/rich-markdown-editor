@@ -29,6 +29,7 @@ import headingToSlug from "./lib/headingToSlug";
 
 // styles
 import { StyledEditor } from "./styles/editor";
+import "react-medium-image-zoom/dist/styles.css";
 
 // nodes
 import ReactNode from "./nodes/ReactNode";
