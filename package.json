@@ -26,12 +26,14 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(gemoji|react-medium-image-zoom|refractor)/)"
     ],
-    "modulePathIgnorePatterns": ["<rootDir>/dist/"]
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/"
+    ]
   },
   "dependencies": {
     "copy-to-clipboard": "^3.3.3",
     "fuzzy-search": "^3.2.1",
-    "gemoji": "6.x",
+    "gemoji": "^8.1.0",
     "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",
     "markdown-it-container": "^3.0.0",
@@ -110,7 +112,12 @@
     "type": "git",
     "url": "git+https://github.com/thoughtback/rich-markdown-editor.git"
   },
-  "keywords": ["editor", "markdown", "text", "wysiwyg"],
+  "keywords": [
+    "editor",
+    "markdown",
+    "text",
+    "wysiwyg"
+  ],
   "author": "Tom Moor <tom.moor@gmail.com>",
   "bugs": {
     "url": "https://github.com/thoughtback/rich-markdown-editor/issues"
