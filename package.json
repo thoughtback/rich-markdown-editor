@@ -108,7 +108,12 @@
     "type": "git",
     "url": "git+https://github.com/thoughtback/rich-markdown-editor.git"
   },
-  "keywords": ["editor", "markdown", "text", "wysiwyg"],
+  "keywords": [
+    "editor",
+    "markdown",
+    "text",
+    "wysiwyg"
+  ],
   "author": "Tom Moor <tom.moor@gmail.com>",
   "bugs": {
     "url": "https://github.com/thoughtback/rich-markdown-editor/issues"
