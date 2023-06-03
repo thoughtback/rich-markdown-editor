@@ -7,7 +7,7 @@
   "license": "BSD-3-Clause",
   "funding": "https://github.com/sponsors/thoughtback",
   "scripts": {
-    "build": "esbuild src/index.tsx --bundle --minify --sourcemap --outdir=dist",
+    "build": "tsc",
     "build-storybook": "storybook build",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet",
     "start": "storybook dev -p 6006",
