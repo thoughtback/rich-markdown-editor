@@ -7627,9 +7627,9 @@ orderedmap@^2.0.0:
   integrity sha512-TvAWxi0nDe1j/rtMcWcIj94+Ffe6n7zhow33h40SKxmsmozs6dz/e+EajymfoFcHd7sxNn8yHM8839uixMOV6g==
 
 outline-icons@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.npmjs.org/outline-icons/-/outline-icons-2.2.0.tgz"
-  integrity sha512-9QjFdxoCGGFz2RwsXYz2XLrHhS/qwH5tTq/tGG8hObaH4uD/0UDfK/80WY6aTBRoyGqZm3/gwRNl+lR2rELE2g==
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/outline-icons/-/outline-icons-2.2.1.tgz#51ac7f93f1c81aae7b30ae758ac71d43882cd3a3"
+  integrity sha512-906AFblb2zwCRKMAQf1Avt78r4UgMKF5pJiT2oX75g1mK6gO+CcxtNGxZpGlH163uCtUBn9ouiqRSFvmUYTySQ==
 
 p-limit@^2.0.0, p-limit@^2.2.0:
   version "2.3.0"
