@@ -307,6 +307,7 @@ class LinkEditor extends React.Component<Props, State> {
           onKeyDown={this.handleKeyDown}
           onPaste={this.handlePaste}
           onChange={this.handleChange}
+          // eslint-disable-next-line jsx-a11y/no-autofocus
           autoFocus={this.href === ""}
         />
 
