@@ -5,7 +5,6 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "license": "BSD-3-Clause",
-  "funding": "https://github.com/sponsors/thoughtback",
   "scripts": {
     "build": "esbuild src/index.tsx --bundle --minify --sourcemap --outdir=dist",
     "build-storybook": "storybook build",
