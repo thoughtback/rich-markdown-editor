@@ -1,4 +1,7 @@
-import { findParentNode, findSelectedNodeOfType } from "prosemirror-utils";
+import {
+  findParentNode,
+  findSelectedNodeOfType,
+} from "../lib/prosemirror-utils";
 
 const isNodeActive =
   (type, attrs: Record<string, any> = {}) =>

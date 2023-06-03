@@ -1,9 +1,21 @@
-import { findBlockNodes, NodeWithPos } from "prosemirror-utils";
+import {
+  findBlockNodes,
+  // NodeWithPos
+} from "../lib/prosemirror-utils";
 import { Node } from "prosemirror-model";
 
-export default function findCollapsedNodes(doc: Node): NodeWithPos[] {
+interface NodeType {
+  nodeSize: number;
+}
+
+interface BlockType {
+  pos: number;
+  node: NodeType;
+}
+
+export default function findCollapsedNodes(doc: Node) {
   const blocks = findBlockNodes(doc);
-  const nodes: NodeWithPos[] = [];
+  const nodes: BlockType[] = [];
 
   let withinCollapsedHeading;
 
