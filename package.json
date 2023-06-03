@@ -26,7 +26,9 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(react-medium-image-zoom|gemoji)/)"
     ],
-    "modulePathIgnorePatterns": ["<rootDir>/dist/"]
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/"
+    ]
   },
   "dependencies": {
     "copy-to-clipboard": "^3.3.3",
@@ -60,6 +62,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.22.1",
+    "@babel/plugin-syntax-flow": "^7.21.4",
+    "@babel/plugin-transform-react-jsx": "^7.22.3",
     "@babel/preset-env": "^7.22.4",
     "@babel/preset-react": "^7.22.3",
     "@babel/preset-typescript": "^7.21.5",
@@ -94,12 +98,14 @@
     "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
     "source-map-loader": "^4.0.1",
     "storybook": "^7.0.18",
     "styled-components": "^5.3.11",
     "ts-loader": "^9.4.3",
     "tsc-watch": "^6.0.4",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "webpack": "^5.85.0"
   },
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0",
@@ -110,7 +116,12 @@
     "type": "git",
     "url": "git+https://github.com/thoughtback/rich-markdown-editor.git"
   },
-  "keywords": ["editor", "markdown", "text", "wysiwyg"],
+  "keywords": [
+    "editor",
+    "markdown",
+    "text",
+    "wysiwyg"
+  ],
   "author": "Tom Moor <tom.moor@gmail.com>",
   "bugs": {
     "url": "https://github.com/thoughtback/rich-markdown-editor/issues"
