@@ -7,7 +7,7 @@
   "license": "BSD-3-Clause",
   "funding": "https://github.com/sponsors/thoughtback",
   "scripts": {
-    "build": "tsc",
+    "build": "esbuild src/index.tsx --bundle --minify --sourcemap --outdir=dist",
     "build-storybook": "storybook build",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet",
     "start": "storybook dev -p 6006",
@@ -20,13 +20,9 @@
     "static": "example/dist"
   },
   "jest": {
-    "moduleNameMapper": {
-      ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy"
-    },
-    "transformIgnorePatterns": [
-      "node_modules/(?!(react-medium-image-zoom|gemoji)/)"
-    ],
-    "modulePathIgnorePatterns": ["<rootDir>/dist/"]
+    "transform": {
+      "^.+\\.[jt]sx?$": "esbuild-jest"
+    }
   },
   "dependencies": {
     "copy-to-clipboard": "^3.3.3",
@@ -60,6 +56,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.22.1",
+    "@babel/plugin-syntax-flow": "^7.21.4",
+    "@babel/plugin-transform-react-jsx": "^7.22.3",
     "@babel/preset-env": "^7.22.4",
     "@babel/preset-react": "^7.22.3",
     "@babel/preset-typescript": "^7.21.5",
@@ -79,8 +77,9 @@
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.59.8",
     "@typescript-eslint/parser": "^5.59.8",
-    "babel-jest": "^29.5.0",
     "babel-loader": "^9.1.2",
+    "esbuild": "^0.17.19",
+    "esbuild-jest": "^0.5.0",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-react-app": "^7.0.1",
@@ -94,12 +93,11 @@
     "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "source-map-loader": "^4.0.1",
+    "react-is": "^18.2.0",
     "storybook": "^7.0.18",
     "styled-components": "^5.3.11",
-    "ts-loader": "^9.4.3",
-    "tsc-watch": "^6.0.4",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "webpack": "^5.85.0"
   },
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0",
