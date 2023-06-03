@@ -15,8 +15,8 @@
       "react",
       "jest"
     ],
-    "rootDir": "src",
-    "outDir": "dist",
+    "rootDir": "./src",
+    "outDir": "./dist",
     "stripInternal": true,
     "removeComments": true,
     "declarationMap": true,

@@ -481,6 +481,7 @@ class CommandMenu<T extends MenuItem = MenuItem> extends React.Component<
                 }
                 onKeyDown={this.handleLinkInputKeydown}
                 onPaste={this.handleLinkInputPaste}
+                // eslint-disable-next-line jsx-a11y/no-autofocus
                 autoFocus
               />
             </LinkInputWrapper>

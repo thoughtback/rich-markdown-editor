@@ -1,34 +1,20 @@
 {
+  "root": true,
   "parser": "@typescript-eslint/parser",
   "extends": [
-    "plugin:react/recommended",
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript"
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "react-app",
+    "prettier"
   ],
   "plugins": [
+    "@typescript-eslint",
+    "prettier",
     "jsx-a11y"
   ],
-  "rules": {
-    "eqeqeq": 2,
-    "no-unused-vars": "off",
-    "no-mixed-operators": "off",
-    "jsx-a11y/href-no-hash": "off",
-    "react/prop-types": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "error"
-    ],
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "prettier/prettier": [
-      "error",
-      {
-        "printWidth": 80,
-        "trailingComma": "es5"
-      }
-    ]
-  },
   "settings": {
     "react": {
       "version": "detect"

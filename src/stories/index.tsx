@@ -52,6 +52,7 @@ class YoutubeEmbed extends React.Component<{
       <iframe
         className={this.props.isSelected ? "ProseMirror-selectednode" : ""}
         src={`https://www.youtube.com/embed/${videoId}?modestbranding=1`}
+        title="YouTube"
       />
     );
   }
@@ -68,6 +69,7 @@ const embeds = [
         src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle_%282017%29.svg"
         width={24}
         height={24}
+        alt="youtube"
       />
     ),
     matcher: (url) => {
