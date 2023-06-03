@@ -5,6 +5,15 @@ import { findBlockNodes } from "../lib/prosemirror-utils";
 import findCollapsedNodes from "../queries/findCollapsedNodes";
 import { headingToPersistenceKey } from "../lib/headingToSlug";
 
+interface NodeType {
+  nodeSize: number;
+}
+
+interface BlockType {
+  pos: number;
+  node: NodeType;
+}
+
 export default class Folding extends Extension {
   get name() {
     return "folding";
@@ -57,7 +66,7 @@ export default class Folding extends Extension {
           decorations: (state) => {
             const { doc } = state;
             const decorations: Decoration[] = findCollapsedNodes(doc).map(
-              (block) =>
+              (block: BlockType) =>
                 Decoration.node(block.pos, block.pos + block.node.nodeSize, {
                   class: "folded-content",
                 })

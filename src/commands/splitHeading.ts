@@ -23,7 +23,8 @@ export default function splitHeading(type: NodeType) {
     const allBlocks = findBlockNodes(state.doc);
     const collapsedBlocks = findCollapsedNodes(state.doc);
     const visibleBlocks = allBlocks.filter(
-      (a) => !collapsedBlocks.find((b) => b.pos === a.pos)
+      (a: { pos: number }) =>
+        !collapsedBlocks.find((b: { pos: number }) => b.pos === a.pos)
     );
     const nextVisibleBlock = visibleBlocks.find((a) => a.pos > from);
     const pos = nextVisibleBlock
