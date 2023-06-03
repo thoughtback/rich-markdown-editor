@@ -798,7 +798,7 @@ export const cloneRowAt = (rowIndex) => (tr) => {
       if (rowWidth < map.width) {
         let rowSpanCells = [];
         for (let i = rowIndex; i >= 0; i--) {
-          let foundCells = filterCellsInRow(i, (cell, tr) => {
+          let foundCells = filterCellsInRow(i, (cell) => {
             const rowspan = cell.node.attrs.rowspan;
             const spanRange = i + rowspan;
             return rowspan > 1 && spanRange > rowIndex;
@@ -925,7 +925,7 @@ export const removeSelectedColumns = (tr) => {
         selection.$headCell.pos - table.start
       );
 
-      if (rect.left == 0 && rect.right == map.width) {
+      if (rect.left === 0 && rect.right === map.width) {
         return false;
       }
 
@@ -973,7 +973,7 @@ export const removeSelectedRows = (tr) => {
         selection.$headCell.pos - table.start
       );
 
-      if (rect.top == 0 && rect.bottom == map.height) {
+      if (rect.top === 0 && rect.bottom === map.height) {
         return false;
       }
 
