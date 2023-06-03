@@ -1,8 +1,17 @@
-// This config is only used for TS support in Jest
+// This config is only used for TS support in Storybook
 module.exports = {
+  sourceType: "unambiguous",
   presets: [
-    "@babel/preset-react",
-    ["@babel/preset-env", { targets: { node: "current" } }],
+    [
+      "@babel/preset-env",
+      {
+        targets: {
+          chrome: 100,
+        },
+      },
+    ],
     "@babel/preset-typescript",
+    "@babel/preset-react",
   ],
+  plugins: [],
 };
