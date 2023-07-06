@@ -23,7 +23,7 @@
   "dependencies": {
     "copy-to-clipboard": "^3.3.3",
     "fuzzy-search": "^3.2.1",
-    "gemoji": "6.x",
+    "gemoji": "8.x",
     "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",
     "markdown-it-container": "^3.0.0",
